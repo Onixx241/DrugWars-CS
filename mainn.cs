@@ -5,11 +5,11 @@ namespace prog {
         class person {
 
             public string name;
-            public int money = 599;
+
+            public int money = 500;
 
             public int Work() {
                 
-                person MyPerson = new person();
                 
                 if (this.money >= 0) {
 
@@ -33,11 +33,13 @@ namespace prog {
 
         static void Main(String[] args)
         {
-            person Myperson= new person();
-            Myperson.nameSelect();
-            Myperson.Work();
-            Console.WriteLine(Myperson.money);
-            Console.WriteLine(Myperson.name);
+            
+            bool mainLoop = true;
+
+            while(mainLoop){
+
+            }
+
         }
     
     }
