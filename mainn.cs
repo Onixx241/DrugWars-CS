@@ -98,7 +98,8 @@ namespace prog {
                         break;
                     case 2:
                         Console.WriteLine("Buy");
-                        drugs.b
+                        drugs.BuyDrugs(Player.money);
+                        
                         break;
                     case 3: 
                         Console.WriteLine("Sell");
