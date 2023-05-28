@@ -1,10 +1,36 @@
 namespace prog {
 
     public class program {
-        class places{
+        class drugs{
+            public string coke = "Coke";
 
-            public string[] placeList = {"New York", "Miami"};
+            public string weed = "Weed";
 
+            public string shrooms = "Shrooms";
+
+            public string heroin = "Heroin";
+
+            static void BuyDrugs(int money){
+
+                Console.WriteLine("What Drugs Would You Like To Buy?");
+
+                Console.WriteLine(weed);
+
+                Console.WriteLine(shrooms);
+
+                Console.WriteLine(heroin);
+
+                Console.WriteLine(coke);
+                int choice = Convert.ToInt32(Console.ReadLine());
+                if(choice == 1){
+                    money - 250;
+                    Console.WriteLine($"Money After Purchase: {money}");
+                }
+
+
+            }
+
+                        
         }
         class person {
 
@@ -45,9 +71,19 @@ namespace prog {
 
         static void Main(String[] args)
         {
+            person Player = new person();
+            
+            drugs drugz = new drugs();
+            //keep going here and drugs method..
+
             int round = 1;
+
             bool mainLoop = true;
+
             places placeList = new places();
+
+            Console.WriteLine($"Money: {Player.money}");
+
             while(mainLoop){
                 // Display message , Ask user for name , load choices (travel , buy , sell)
                 Console.WriteLine("Welcome To Drug Wars");
@@ -62,6 +98,7 @@ namespace prog {
                         break;
                     case 2:
                         Console.WriteLine("Buy");
+                        drugs.b
                         break;
                     case 3: 
                         Console.WriteLine("Sell");
