@@ -10,7 +10,7 @@ namespace prog {
 
             public string heroin = "Heroin";
 
-            static void BuyDrugs(int money){
+            public int BuyDrugs(int money){
 
                 Console.WriteLine("What Drugs Would You Like To Buy?");
 
@@ -23,9 +23,11 @@ namespace prog {
                 Console.WriteLine(coke);
                 int choice = Convert.ToInt32(Console.ReadLine());
                 if(choice == 1){
-                    money - 250;
+                    money = money - 250;
                     Console.WriteLine($"Money After Purchase: {money}");
+                    return money;
                 }
+                return money;
 
 
             }
@@ -80,7 +82,7 @@ namespace prog {
 
             bool mainLoop = true;
 
-            places placeList = new places();
+            
 
             Console.WriteLine($"Money: {Player.money}");
 
@@ -93,13 +95,16 @@ namespace prog {
 
                     case 1:
                         Console.WriteLine("Travel");
-                        Console.WriteLine(placeList.placeList[0] + "\n" + placeList.placeList[1]);
+                        
                         Console.ReadKey();
                         break;
                     case 2:
                         Console.WriteLine("Buy");
-                        drugs.BuyDrugs(Player.money);
-                        
+
+                        Player.money = drugz.BuyDrugs(Player.money);
+
+                        Console.WriteLine("Absolute Value = " + Player.money);
+
                         break;
                     case 3: 
                         Console.WriteLine("Sell");
