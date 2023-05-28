@@ -63,8 +63,12 @@ namespace prog {
                     case 2:
                         Console.WriteLine("Buy");
                         break;
-
-
+                    case 3: 
+                        Console.WriteLine("Sell");
+                        break;
+                    case 4:
+                        Console.WriteLine("Inventory");
+                        break;
                 }
 
                 round++;
